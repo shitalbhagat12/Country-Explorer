@@ -1,0 +1,218 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://i.pinimg.com/736x/21/61/1b/21611b38a1a7f75b483162fe7386c326.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Header Styling */
+header {
+  padding: 20px;
+  background-color: #d49e7a;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+#search-bar {
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Filters Section Styling */
+.filters-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between filters */
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; /* Center the section */
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.filters-wrapper label {
+  font-weight: 500;
+  color: #b9703e;
+}
+
+.filters-wrapper select,
+.filters-wrapper input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Main Container and Content */
+.container {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+}
+
+/* Sidebar and Country List Styles Remain Unchanged */
+
+
+/* Sidebar Styling */
+aside {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#filters {
+  width: 20%;
+}
+
+#favorites-panel {
+  width: 20%;
+  border-left: 2px solid #e3e4e8;
+  padding-left: 20px;
+}
+
+#favorites-panel h3 {
+  margin-bottom: 10px;
+  color: #b9703e;
+  font-weight: 600;
+}
+
+#favorites-list .favorite-card {
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+#favorites-list .favorite-card:hover {
+  color: #b9703e;
+}
+
+/* Main Content Styling */
+main {
+  flex: 1;
+}
+
+#country-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.country-card {
+  border-radius: 10px;
+  border: 1px solid #e3e4e8;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.country-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.country-card h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #b9703e;
+}
+
+.country-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #f1f4f8;
+}
+
+/* Button Styling */
+button {
+  display: inline-block;
+  background-color: #b9703e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #b9703e;
+}
+
+/* Show More Button */
+#show-more {
+  display: block;
+  margin: 20px auto;
+  background-color: #b9703e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#show-more:hover {
+  background-color: #b9703e;
+}
+/* Style for the Favorite Button */
+.favorite-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ccc; /* Default gray color for the heart */
+  transition: color 0.3s;
+}
+
+.favorite-btn .heart-icon {
+  font-size: 24px;
+  color: #ccc; /* Default color for the heart */
+  transition: color 0.3s;
+}
+
+/* Active state for the heart icon (when clicked) */
+.favorite-btn.active .heart-icon {
+  color: #e63946; /* Red color when the heart is clicked */
+}
